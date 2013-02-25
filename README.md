@@ -1,4 +1,4 @@
-vstest.teamcity.logger
+Visual Studio 2012 Teamcity tests runner (kinda)
 ======================
 
 VSTest logger for TeamCity
@@ -22,7 +22,7 @@ From Vikram Agrawal blog entry [1]:
 There are two requirements for custom test logger
 
 > 1. Implement interface Microsoft.VisualStudio.TestPlatform.ObjectModel.Client.ITestLogger
->		Interface can be found in __“C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll”__
+>		Interface can be found in __ï¿½C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Microsoft.VisualStudio.TestPlatform.ObjectModel.dllï¿½__
 >
 > 2. Assembly containing logger implementation to be present in place where extensions are searched like __"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Extensions"__
 >		Assembly can be installed with VSIX like test adapters. In that case use /UseVSIXExtensions parameter also.
