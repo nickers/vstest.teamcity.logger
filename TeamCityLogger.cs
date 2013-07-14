@@ -60,11 +60,11 @@ namespace vstest.teamcity.logger
 
 			if (e.Result.Outcome == TestOutcome.Skipped)
 			{
-				Console.WriteLine("##teamcity[testFailed name='{0}' message='Skipped: {1}']", name, e.Result.ErrorMessage);
+				Console.WriteLine("##teamcity[testFailed name='{0}' message='Skipped: {1}']", name, e.Result.ErrorMessage.Replace("\r\n", " "));
 			}
 			else if (e.Result.Outcome == TestOutcome.Failed)
 			{
-				Console.WriteLine("##teamcity[testFailed name='{0}' message='{1}']", name, e.Result.ErrorMessage);
+				Console.WriteLine("##teamcity[testFailed name='{0}' message='{1}']", name, e.Result.ErrorMessage.Replace("\r\n", " "));
 			}
 			else if (e.Result.Outcome == TestOutcome.Passed)
 			{
