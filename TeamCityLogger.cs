@@ -72,7 +72,7 @@ namespace vstest.teamcity.logger
 				//// do nothing
 			}
 
-			Console.WriteLine("##teamcity[testFinished name='{0}' duration='{1}']", name, e.Result.Duration.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));
+			Console.WriteLine("##teamcity[testFinished name='{0}' duration='{1}']", name, ((long)e.Result.Duration.TotalMilliseconds).ToString(CultureInfo.InvariantCulture));
 		}
 
 		/// <summary>
