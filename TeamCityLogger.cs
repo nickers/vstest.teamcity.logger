@@ -61,7 +61,7 @@ namespace vstest.teamcity.logger
 
 			if (e.Result.Outcome == TestOutcome.Skipped)
 			{
-				Console.WriteLine("##teamcity[testFailed name='{0}' message='Skipped: {1}']", name, e.Result.ErrorMessage.Replace("\r\n", " "));
+				Console.WriteLine("##teamcity[testIgnored name='{0}' message='Skipped: {1}']", name, e.Result.ErrorMessage.Replace("\r\n", " "));
 			}
 			else if (e.Result.Outcome == TestOutcome.Failed)
 			{
